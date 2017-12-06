@@ -25,19 +25,19 @@ class ViewController: UIViewController {
 
     let url = "http://www.mocky.io/v2/5a280c282f0000f92c0635e6"
     
-    private func parseSinglePersonJSON() {
+    private func parseJSON() {
         guard let url = URL(string: url) else { return }
         let session = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             guard let result = try? JSONDecoder().decode(Result.self, from: data) else { return }
-            print("\n\n Result : \(result)")
+            print("\n\nResult : \(result)")
         }
         session.resume()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parseSinglePersonJSON()
+        parseJSON()
     }
 }
 
