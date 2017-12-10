@@ -13,5 +13,10 @@ https://stackoverflow.com/questions/38155436/json-parsing-in-swift-3/47678200#47
 
 https://stackoverflow.com/questions/47707365/swift4-cakeyframeanimation-not-work/47726202#47726202
 
+04. Dictionary testing while adding items into it :
+
+https://stackoverflow.com/questions/47739325/make-statement-more-clear-checking-object-for-key-in-dictionary/47739606#47739606
+
+
 
 
