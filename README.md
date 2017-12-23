@@ -22,6 +22,12 @@ https://stackoverflow.com/questions/47707365/swift4-cakeyframeanimation-not-work
 
 https://stackoverflow.com/questions/47739325/make-statement-more-clear-checking-object-for-key-in-dictionary/47739606#47739606
 
+05. Arc Drawing in view :
+
+https://stackoverflow.com/questions/47953052/create-an-arc-in-swift-for-ui-collection-view/47953330#47953330
+
+
+
 
 
 
