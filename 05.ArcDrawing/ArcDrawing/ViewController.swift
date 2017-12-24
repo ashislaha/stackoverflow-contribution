@@ -18,6 +18,11 @@ class ViewController: UIViewController {
         arcView = ArcView(frame: view.frame)
         view.addSubview(arcView)
         arcView.setNeedsDisplay()
+        
+        print(navigationController?.topViewController ?? "")
+        if let presentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PDFViewController") as? PDFViewController{
+            //self.navigationController?.pushViewController(presentVC, animated: true)
+        }
     }
 
 }
@@ -49,5 +54,12 @@ class ArcView : UIView {
         bezierPath.lineWidth = lineWidth
         UIColor(red: 249/255.0, green: 179/255.0, blue: 127/255.0, alpha: 1.0).setStroke()
         bezierPath.stroke()
+    }
+}
+
+class PDFViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .green
     }
 }
