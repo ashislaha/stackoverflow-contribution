@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         print(navigationController?.topViewController ?? "")
         if let presentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PDFViewController") as? PDFViewController{
-            //self.navigationController?.pushViewController(presentVC, animated: true)
+            self.navigationController?.pushViewController(presentVC, animated: true)
         }
     }
 
