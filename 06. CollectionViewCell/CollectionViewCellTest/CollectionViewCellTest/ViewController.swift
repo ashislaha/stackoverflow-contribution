@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    private var isPlaying: Bool = false
     private var isPlayingModel = [false, false, false, false, false] // initially all are stop, not playing
     
     @IBOutlet weak var collectionView: UICollectionView! {
