@@ -26,6 +26,10 @@ https://stackoverflow.com/questions/47739325/make-statement-more-clear-checking-
 
 https://stackoverflow.com/questions/47953052/create-an-arc-in-swift-for-ui-collection-view/47953330#47953330
 
+06. UICollectionView cellForItem(at:) crashes
+
+https://stackoverflow.com/questions/48440503/uicollectionview-cellforitemat-crashes/48441396#48441396
+
 
 
 
