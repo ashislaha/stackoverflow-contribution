@@ -30,7 +30,15 @@ https://stackoverflow.com/questions/47953052/create-an-arc-in-swift-for-ui-colle
 
 https://stackoverflow.com/questions/48440503/uicollectionview-cellforitemat-crashes/48441396#48441396
 
+07. Long press gesture view movement:
 
+https://stackoverflow.com/questions/48973328/uipangesturerecognizer-for-programatically-added-uiview/48974434#48974434
+
+and 
+
+https://stackoverflow.com/questions/48971598/how-can-i-find-the-height-and-width-of-the-safe-area/48971696#48971696
+
+![abc](https://user-images.githubusercontent.com/10649284/36642340-35b3f630-1a64-11e8-9b20-d780f91cb63f.gif)
 
 
 
