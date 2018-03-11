@@ -8,6 +8,18 @@
 
 import UIKit
 
+class ChatRoom: NSObject {
+    var inputStream: InputStream?
+    var outputStream: OutputStream?
+    var userName: String?
+    let maxReadingLength = 4096
+    
+    override init() {
+        super.init()
+    }
+}
+
+
 class ViewController: UIViewController {
 
     private let testLabel: UILabel = {
@@ -39,9 +51,14 @@ class ViewController: UIViewController {
         labelSetup()
     }
     
-    
+    var chatRoom = ChatRoom()
     var circleView: UIView!
     
+    private func chatCommunicationSetup() {
+        
+    }
+    
+    //MARK: long press action
     @IBAction func spaceLongPressed(_ guesture: UILongPressGestureRecognizer) {
         let location = guesture.location(in: view)
         let size = CGSize(width: 100, height: 100)
@@ -69,19 +86,15 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+}
 
+//MARK: perform stack operations
+extension ViewController {
     
     public func solution(_ S : inout String) -> Int {
         // write your code in Swift 3.0 (Linux)
         
         guard !S.isEmpty else { return 0 }
-        
-        
         var result: Int = 0
         let operations = S.components(separatedBy: " ") // parse the input
         
@@ -118,78 +131,6 @@ class ViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
-        
         return result
     }
-
-
 }
-
-
-//: Playground - noun: a place where people can play
-
-
-
-// Error handling
-enum StackOperationsError: Error {
-    case InsufficientIntInStackToPerformOperation
-    case StackIsEmpty
-}
-
-// define a stack
-struct Stack {
-    
-    var items : [Int] = []
-    
-    // push
-    mutating func push(item : Int) { items.append(item) }
-    
-    // pop
-    @discardableResult
-    mutating func pop() throws -> Int? {
-        guard !items.isEmpty else { throw StackOperationsError.StackIsEmpty }
-        return items.removeLast()
-    }
-    
-    // top
-    mutating func top() throws-> Int? {
-        guard !items.isEmpty else { throw StackOperationsError.StackIsEmpty }
-        return items.last
-    }
-    
-    // duplicate
-    mutating func duplicate() throws {
-        guard !items.isEmpty else { throw StackOperationsError.StackIsEmpty }
-        
-        if let top = items.last {
-            items.append(top)
-        }
-    }
-    
-    // addition
-    mutating func add() throws {
-        // add top 2 items
-        guard !items.isEmpty else { throw StackOperationsError.StackIsEmpty }
-        
-        let firstPop = items.removeLast()
-        guard !items.isEmpty else { throw StackOperationsError.InsufficientIntInStackToPerformOperation }
-        let secondPop = items.removeLast()
-        let result = firstPop + secondPop
-        items.append(result)
-    }
-    
-    // subtraction
-    mutating func subtract() throws {
-        // subtract top 2 Ints
-        guard !items.isEmpty else { throw StackOperationsError.StackIsEmpty }
-        
-        let firstPop = items.removeLast()
-        guard !items.isEmpty else { throw StackOperationsError.InsufficientIntInStackToPerformOperation }
-        let secondPop = items.removeLast()
-        let result = firstPop - secondPop
-        items.append(result)
-    }
-}
-
-
-
